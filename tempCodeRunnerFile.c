@@ -1,4 +1,1 @@
-
-    scanf("%d",&a);
-    scanf("%f",&b);
-    printf("%f,%d",b,a);
+int spc=n-1;

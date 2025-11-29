@@ -3,9 +3,9 @@ int main()
 {
     int n;
     scanf("%d",&n);
-    int star=1;
-    int spc=n-1;
-    for(int i=1;i<=n;i++)
+    int star=2*n-1;
+    int spc=n;
+    for(int i=n;i>=1;i--)
     {
         for(int k=1;k<=spc;k++)
         {
@@ -13,11 +13,11 @@ int main()
         }
         for (int j=1;j<=star;j++)
         {
-            printf("%d",j);
+            printf("*");
         }
         printf("\n");
-        star+=2;
-        spc--;
+        star-=2;
+        spc++;
     }
     return 0;
 }

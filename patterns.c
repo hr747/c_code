@@ -13,9 +13,15 @@ int main()
         }
         for (int j=1;j<=star;j++)
         {
-            printf("%d",j);
+            printf("*");
         }
-        printf("\n");
+
+        //  exta line print bondho korer jonno  if bebothar kotha hoise
+          if(i != n)        
+        {
+            printf("\n");
+        }
+
         star+=2;
         spc--;
     }

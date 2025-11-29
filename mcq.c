@@ -1,20 +1,12 @@
 #include<stdio.h>
 int main()
-{for(int i=0; i<=10; i++)
 {
-
-if(i>2)
-
-{
-
-break;
-
-}
-
-printf("hi \n");
-}
-
-    
-    
+    int arryname[5]={1,2,3,4,5};
+    int sum=0;
+    for(int i=0;i<3;i++)
+    {
+        sum+=arryname[i];
+    }
+    printf("%d",sum);
     return 0;
 }
