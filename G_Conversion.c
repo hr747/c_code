@@ -1,26 +1,24 @@
 #include<stdio.h>
 int main()
 {
-char s [100001];
-scanf("%s",s);
-for(int i=0;s[i]!='\0';i++)
-{
-    if(s[i]==',')
+    char a[1000001];
+    scanf("%s",a);
+    for(int i=0;a[i]!='\0';i++)
     {
-        s[i]=' ';
+        if(a[i]==',')
+        {
+            a[i]=' ';
+        }
+        else if (a[i]>='a' &&a[i]<='z')
+        {
+            a[i]-=32;
+        }
+         else if (a[i]>='A' &&a[i]<='Z')
+        {
+            a[i]+=32;
+        }
+        
     }
-    
-    else if (s[i]>='A'&& s[i]<='Z')
-    {
-        s[i]=s[i]+32;
-
-    }
-        else if (s[i]>='a'&& s[i]<='z')
-    {
-        s[i]=s[i]-32;
-
-    }   
-}
-printf("%s\n",s);
+    printf("%s\n",a);
     return 0;
 }

@@ -1,17 +1,19 @@
 #include<stdio.h>
 #include<string.h>
 int main()
-{ 
-    char s[1000001];
-    scanf("%s",s);
-    int legnt = strlen(s);
-    int sum=0;
-    for(int i=0;i<legnt;i++)
+{
+    char a[10000001];
+    scanf("%s",a);
+    int len= strlen(a);
+    int z=0;
+    for(int i=0;i<len;i++)
     {
-        sum+=s[i]-48;
-   
+        z+=a[i]-48;
+        
+        
     }
-    printf("%d",sum);
+    printf("%d",z);
     
     return 0;
 }
+

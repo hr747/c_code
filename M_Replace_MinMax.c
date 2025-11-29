@@ -1,36 +1,33 @@
 #include<stdio.h>
 int main()
 {
-int n;
+    int n;
     scanf("%d",&n);
-    int ar[n];
-    for( int i=0;i<n;i++)
+    int a[n];
+    for(int i=0;i<n;i++)
     {
-        scanf("%d",&ar[i]);
+        scanf("%d",&a[i]);
     }
-int x=0;
-int y=0;
+    int mini=0;
+    int max=0;
+    for(int i=1;i<n;i++)
+    {if (a[i]<a[mini])
+        {
+            mini=i;
+        }
+        else if (a[i]>a[max])
+        {
+            max=i;
+        } 
+    
+    } 
+    int tmp=a[mini];
+    a[mini]=a[max];
+    a[max]=tmp;
 
-    for(int i=0; i<n; i++)
+     for(int i=0;i<n;i++)
     {
-     if (ar[i]<ar[x])
-     {
-        x=i;
-
-     }
-     else if (ar[i]>ar[y])
-     {
-        y=i;
-     }
-    }
-    int tmp=ar[x];
-    ar[x]=ar[y];
-    ar[y]=tmp;
-
-
-      for( int i=0;i<n;i++)
-    {
-        printf("%d ",ar[i]);
+        printf("%d ",a[i]);
     }
 
     return 0;
